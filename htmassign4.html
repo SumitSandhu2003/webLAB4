@@ -1,129 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Registration form</title>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
     <style>
-        table,th,tr{width: 40%;
-                     border="2" cellspacing="0" cellpadding="10";
-           padding: 1px;
-           margin: 1px;
-           background-color: rgb(243, 235, 235);
-           border-collapse:collapse ;
-           
-            border: 1px solid black;}
+        table {
+            width: 60%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: rgb(243, 235, 235);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #ddd;
+            text-align: center;
+        }
+
+        body {
+            background-color: rgb(167, 215, 221);
+            font-family: Arial, sans-serif;
+        }
+
+        .center {
+            text-align: center;
+        }
     </style>
 </head>
-
-<body style="background-color: rgb(167, 215, 221);">
+<body>
 
     <form>
-        <table >
-            <caption><B>Complex Registration Form</B></caption>
-            <tbody style="display: block;">
-                <th style="text-align: center;">Personal Details</th><br>
+        <table>
+            <caption><strong>Complex Registration Form</strong></caption>
+            
+            <!-- Personal Details -->
+            <thead>
+                <tr><th colspan="2">Personal Details</th></tr>
+            </thead>
+            <tbody>
                 <tr>
-                    <td style="border: 1px; border-collapse: collapse;"> <label calss="personal"> First Name<input
-                                type="text" name="first" required></input></label></td>
+                    <td>First Name</td>
+                    <td><input type="text" name="first" required></td>
                 </tr>
                 <tr>
-                    <td> <label calss="personal"> Last Name<input type="text" name="first" required></input></label>
-                    </td>
+                    <td>Last Name</td>
+                    <td><input type="text" name="last" required></td>
                 </tr>
                 <tr>
-                    <td> <label calss="personal"> Email<input type="email" name="first" required></input></label></td>
+                    <td>Email</td>
+                    <td><input type="email" name="email" required></td>
                 </tr>
                 <tr>
-                    <td> <label calss="personal"> Phone Number<input type="text" size="10" name="first"
-                                accept="number"></input></label></td>
+                    <td>Phone Number</td>
+                    <td><input type="text" name="phone" maxlength="10" required></td>
                 </tr>
             </tbody>
-            <tbody style="display: block;">
-                <th style="text-align: center;">Account Details</th><br>
-                <tr>
-                    <td style="border: 1px; border-collapse: collapse;"> <label calss="account"> Username<input
-                                type="text" name="Username"></input></label></td>
-                </tr>
-                <tr>
-                    <td> <label calss="account"> Password<input type="password" name="password"></input></label></td>
-                </tr>
-                <tr>
-                    <td> <label calss="account"> Confirm Password<input type="password" name="password"></input></label>
-                    </td>
-                </tr>
 
+            <!-- Account Details -->
+            <thead>
+                <tr><th colspan="2">Account Details</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" required></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td>
+                    <td><input type="password" name="confirm_password" required></td>
+                </tr>
             </tbody>
-            <tbody style="display: block;">
-                <th style="text-align: center;">Address</th><br>
-                <tr>
-                    <td > <label calss="address"> Address Line 1<address><input type="text" name="Username"></address></input></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td> <label calss="address"> Address Line 2<address><input type="text" name="Username"></address></input></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td> <label calss="address"> City<input type="text" name="city"></input></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td> Select State<select><option value="Himachal Pradesh">Himachal Pradesh</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Mumbai">Mumbai</option>
-                        <option value="Hyderabad">Hyderabad</option>
-                        <option value="Uttarpradesh">Uttarpradesh</option></select>
-                    </td>
-                </tr>
-                <tr>
-                    <td> <label calss="address"> ZIP Code<input type="number" size="6" name="city"></input></label>
-                    </td>
-                </tr>
-                <tbody style="display: block;">
-                    <th style="text-align: center;">Preferences</th><br>
-                    <tr>
-                        <td> <label calss="preferences"> Gender<input type="radio" name="gender" value="Male">Male</input></label>
-                           <label> <input type="radio" name="gender" value="Other">Other</input></label>
-                           <label> <input type="radio" name="gender" value="Female">Female</input></label>
-                        </td>
-                    <tr>
-                            <td> <label calss="preferences"> Subscribe Newsletter<input type="checkbox"  name="check"></input></label>
-                            </td>
-                    </tr>
-                    <tr>
-                        <td> <label calss="preferences"> Short Bio<input type="textarea"  ></input></label>
-                        </td>
-                </tr>
-                <tr>
-                    <td>  <input type="checkbox"  >I agree to the Terms and Conditions*</input></label>
-                    </td>
-            </tr>
-            <tr style="display: flex; justify-content: center;">
-                <td>  <input type="submit" value="Register"></input>
-                <input type="reset" value="Reset"></label>
-                </td>
-        </tr>
-    </tbody>
-</form>
-</table>
-<hr>
-Terms And Conditons
-<p>
-    Welcome to our Registration Portal. By Registering you agree to the following terms:
-    <ul><lt>1.Accurate info is There</lt><br>
-    <lt>2.Your Password Is Confedential</lt></ul>
-</p>
-                       
-                    
-                
-               
-               
 
-     
-   
+            <!-- Address -->
+            <thead>
+                <tr><th colspan="2">Address</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Address Line 1</td>
+                    <td><input type="text" name="address1" required></td>
+                </tr>
+                <tr>
+                    <td>Address Line 2</td>
+                    <td><input type="text" name="address2"></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><input type="text" name="city" required></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>
+                        <select name="state" required>
+                            <option value="">--Select--</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ZIP Code</td>
+                    <td><input type="number" name="zip" maxlength="6" required></td>
+                </tr>
+            </tbody>
+
+            <!-- Preferences -->
+            <thead>
+                <tr><th colspan="2">Preferences</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <label><input type="radio" name="gender" value="Male"> Male</label>
+                        <label><input type="radio" name="gender" value="Female"> Female</label>
+                        <label><input type="radio" name="gender" value="Other"> Other</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Subscribe Newsletter</td>
+                    <td><input type="checkbox" name="newsletter"> Yes</td>
+                </tr>
+                <tr>
+                    <td>Short Bio</td>
+                    <td><textarea name="bio" rows="4" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label><input type="checkbox" name="terms" required> I agree to the Terms and Conditions*</label>
+                    </td>
+                </tr>
+                <tr class="center">
+                    <td colspan="2">
+                        <input type="submit" value="Register">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <hr style="margin-top: 40px; width: 60%;">
+
+    <div style="width: 60%; margin: auto;">
+        <h3>Terms and Conditions</h3>
+        <p>Welcome to our Registration Portal. By registering, you agree to the following terms:</p>
+        <ul>
+            <li>1. Provide accurate and complete information.</li>
+            <li>2. Your password is confidential. Do not share it with anyone.</li>
+        </ul>
+    </div>
+
 </body>
-
-
 </html>
-
-
